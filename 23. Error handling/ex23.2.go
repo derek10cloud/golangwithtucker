@@ -15,7 +15,7 @@ func Sqrt(f float64) (float64, error) {
 func main() {
 	sqrt, err := Sqrt(-2)
 	if err != nil {
-		fmt.Printf("Error: %v\n", err)
+		fmt.Printf("Error : %v\n", err)
 		return
 	}
 	fmt.Printf("Sqrt(-2) = %v\n", sqrt)
