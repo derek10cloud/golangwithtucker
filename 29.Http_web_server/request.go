@@ -1,0 +1,2 @@
+type Request struct {
+}
