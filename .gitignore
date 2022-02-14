@@ -15,3 +15,8 @@
 # vendor/
 
 .history
+
+# certificate
+*.crt
+*.csr
+*.key

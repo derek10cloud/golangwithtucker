@@ -2,14 +2,17 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello World")
-		//파일 출력 Fprintf
 	})
+	err := http.ListenAndServeTLS(":3000", "localhost.crt", "localhost.key", nil)
 
-	http.ListenAndServe(":3000", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
